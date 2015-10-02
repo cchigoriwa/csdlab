@@ -14,4 +14,5 @@ public class ZHRIS {
     public String index() {
         return "zhris/index";
     }
+
 }
