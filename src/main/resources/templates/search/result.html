@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Results</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        <div>Search Results</div>
+        <div th:each="wrappedProvider : ${wrappedProviders}" style="border:  blue  solid thin;background-color:  aliceblue; padding: 20px; margin: 20px;">
+
+             <div>
+                <h2>Names</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="name :${wrappedProvider.provider.demographic.names}">                               
+                            <td th:text="${name.forename}"></td>
+                            <td th:text="${name.surname}"></td>
+                        </tr> 
+                    </tbody>
+                </table>
+             </div>
+
+            <div>
+                <h2>Organizations</h2>
+                <table>
+                    <tr th:each="organization :${wrappedProvider.organizations}">
+                        <td th:text="${organization.primaryName}"></td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div>
+                <h2>Coded Types</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Coding Scheme</th>
+                            <th>Value</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+                        <tr th:each="codedType :${wrappedProvider.provider.codedTypes}">
+                            <td th:text="${codedType.code}"></td>
+                            <td th:text="${codedType.codingScheme}"></td>
+                            <td th:text="${codedType.value}"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div>
+                <h2>Facilities</h2>
+                <table>
+                    <tr th:each="facility : ${wrappedProvider.facilities}">
+                        <td th:text="${facility.primaryName}"></td>
+                    </tr>   
+                </table>
+            </div>
+
+
+            <div>
+                <h2>Credentials</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Number</th>
+                            <th>Name</th>
+                            <th>Issue Date</th>
+                            <th>Renewal Date</th>
+                            <th>Issuing Authority</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr th:each="credential :${wrappedProvider.provider.credentials}">                               
+                            <td th:text="${credential.number}"></td>
+                            <td th:text="${credential.codedType.value}"></td>
+                            <td th:text="${#dates.format(credential.credentialIssueDate,'dd/MMM/yyyy')}"></td>
+                            <td th:text="${#dates.format(credential.credentialRenewalDate,'dd/MMM/yyyy')}"></td>
+                            <td th:text="${credential.issuingAuthority}"></td>
+                        </tr> 
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+        </div>
+
+    </body>
+</html>

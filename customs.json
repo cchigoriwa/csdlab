@@ -1,0 +1,14 @@
+{
+    "attributes": {
+        "th:each": {
+            "context": "tr"
+        },
+        "th:text": {
+            "context": "td"
+        },
+        "th:action": {
+            "context": "form"
+        }
+    },
+    "elements": {}
+}

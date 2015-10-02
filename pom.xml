@@ -11,7 +11,7 @@
         <maven.compiler.target>1.7</maven.compiler.target>
     </properties>
     
-      <!-- Inherit defaults from Spring Boot -->
+    <!-- Inherit defaults from Spring Boot -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -28,9 +28,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId> spring-boot-starter-thymeleaf</artifactId>
         </dependency>
+        
+        <dependency>
+            <groupId>zw.co.hitrac.zhriscsd</groupId>
+            <artifactId>zhris-csd-adapter-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        
+        
     </dependencies>
     
-     <!-- Package as an executable jar -->
+    <!-- Package as an executable jar -->
     <build>
         <plugins>
             <plugin>
