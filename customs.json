@@ -3,6 +3,9 @@
         "th:each": {
             "context": "tr"
         },
+        "th:src": {
+            "context": "script"
+        },
         "th:text": {
             "context": "td"
         },
