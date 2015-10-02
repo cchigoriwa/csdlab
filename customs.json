@@ -1,16 +1,19 @@
 {
     "attributes": {
-        "th:each": {
-            "context": "tr"
-        },
         "th:src": {
             "context": "script"
+        },
+        "th:each": {
+            "context": "tr"
         },
         "th:text": {
             "context": "td"
         },
         "th:action": {
             "context": "form"
+        },
+        "aria-expanded": {
+            "context": "a"
         },
         "th:href": {
             "context": "a"
