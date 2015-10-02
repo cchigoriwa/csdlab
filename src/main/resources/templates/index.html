@@ -8,16 +8,96 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"  />
 
         <link rel='stylesheet' th:href='@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}' />
+
+        <!-- Custom styles for this template -->
+        <link th:href="@{/csdlab/css/csdlab.css}" rel="stylesheet" />
     </head>
     <body>
-        <h3>CSD Laboratory</h3>
-        <p>CSD Lab is a project aimed at offering a platform for experimenting 
-            with CSD and JaxCSD. We recommend to incorporate your csd functionality here
-            before implementing it in your applications. CSD Lab is a hub which provides
-            a leeway to test and experiment with a number of technologies and platforms
-            as you are developing your use case functionality.
-        </p>
 
+        <nav class="navbar navbar-fixed-top navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">CSD Lab for Zimbabwe</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+            </div><!-- /.container -->
+        </nav><!-- /.navbar -->
+
+
+        <div class="container">
+
+            <div class="row row-offcanvas row-offcanvas-right">
+
+                <div class="col-xs-12 col-sm-12">
+                    <p class="pull-right visible-xs">
+                        <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+                    </p>
+                    <div class="jumbotron">
+                        <h1>CSD Laboratory for Zimbabwe</h1>
+                        <p>
+                            CSD Lab offers a conducive platform for implementing and testing a number of CSD use cases
+                            prior to exporting successful functionality to live systems or production
+                            environments. The environment offered here does not only consolidate all use cases in one platform
+                            but avoid destabilization of live systems as Integration Platform uses cases will be introduced and
+                            implemented.
+                        </p>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>Inter ZHRIS Integration</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div><!--/.col-xs-6.col-lg-4-->
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>Public Website</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div><!--/.col-xs-6.col-lg-4-->
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>HWO</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div><!--/.col-xs-6.col-lg-4-->
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>TrainSmart Integration</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div><!--/.col-xs-6.col-lg-4-->
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>DHIS Integration</h2>
+                            <p>DHIS and CSD integration is required to enable seamless communication between the two systems. DHIS may require data about human resources capacity in Zimbabwe</p>
+                            <p><a class="btn btn-default" th:href="@{/dhis}" role="button">View details &raquo;</a></p>
+                        </div><!--/.col-xs-6.col-lg-4-->
+                        <div class="col-xs-6 col-lg-4">
+                            <h2>Third Part Integration</h2>
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+                            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+                        </div><!--/.col-xs-6.col-lg-4-->
+                    </div><!--/row-->
+                </div><!--/.col-xs-12.col-sm-9-->
+
+
+            </div><!--/row-->
+
+            <hr />
+
+            <footer>
+                <p>&copy; Company 2014</p>
+            </footer>
+
+        </div>
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script th:src="@{/webjars/jquery/1.11.1/jquery.min.js}"></script>
