@@ -15,4 +15,14 @@ public class Home {
         return "index";
     }
     
+    @RequestMapping("/about")
+    public String about(){
+        return "about";
+    }
+    
+    @RequestMapping("/contact")
+    public String contact(){
+        return "contact";
+    }
+    
 }
