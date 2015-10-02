@@ -6,7 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        <div>Search Results</div>
+        <div>
+            Search Results
+            <a th:href="@{/search}">Search Again</a>
+        </div>
         <div th:each="wrappedProvider : ${wrappedProviders}" style="border:  blue  solid thin;background-color:  aliceblue; padding: 20px; margin: 20px;">
 
              <div>

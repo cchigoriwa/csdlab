@@ -28,7 +28,7 @@ public class Search {
             String address = "http://192.168.1.22:8984/CSD/csr/mohcc/careServicesRequest";
             List<WrappedProvider> wrappedProviders = ProviderFinder.getProviderFromAllDirectories(nationalId, address);
             if (wrappedProviders == null || wrappedProviders.isEmpty()) {
-                return "search/NotFound";
+                return "search/notFound";
             } else {
                 model.addAttribute("wrappedProviders", wrappedProviders);
                 return "search/result";

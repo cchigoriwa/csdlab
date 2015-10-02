@@ -8,6 +8,9 @@
         },
         "th:action": {
             "context": "form"
+        },
+        "th:href": {
+            "context": "a"
         }
     },
     "elements": {}
