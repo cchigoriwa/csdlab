@@ -20,10 +20,6 @@ import zw.hitrac.csdlab.domain.ResourceNotFoundException;
 @RestController
 public class WebService {
 
-    @RequestMapping("/providers")
-    public LiteProvider getProvider() {
-        return new LiteProvider("Charles", "Chigoriwa");
-    }
 
     @RequestMapping("/directories/{directoryId}/providers/{authorityName}/{code}")
     public LiteProvider getLiteProvider(@PathVariable String directoryId, @PathVariable String authorityName,@PathVariable String code) {
